@@ -1,0 +1,19 @@
+Un polígon es pot definir a partir de les coordinades de cadascun dels vèrtexs que el composen.
+
+a)       Definir una estructura Punt per guardar les coordinades d’un vèrtex del polígon.
+b)      Implementar les següents funcions utilitzant l’estructura Punt definida a l’apartat anterior:
+
+Una funció que permeti llegir les coordinades d’un vèrtex i guardar-les en una variable que es passa com a paràmetre per referència del tipus Punt declarada a l’apartat anterior.
+Una funció que mostri per pantalla les coordinades d’un punt.
+Implementar una funció que calculi la distància entre dos punts:
+c)       Utilitzant l’estructura Punt declarada anteriorment, definir l’estructura Poligon necessària per guardar un polígon de n costats, amb un màxim de 30 costats.
+d)      Implementar les següents funcions utilitzant l’estructura Poligon definida a l’apartat anterior:
+
+Implementar funcions per llegir i mostrar per pantalla les coordinades de tots els vèrtexs del polígon (utilitzant les funcions per llegir i mostrar les coordinades d’un punt). La funció per llegir el polígon ha de demanar primer el nº de costats del polígon i després llegir les coordenades de tots els vèrtexs.
+Implementar una funció que calculi el perímetre d’un polígon que es passa com a paràmetre (utilitzant la funció anterior que permet calcular la distància entre dos punts).
+Implementar una funció que donat un polígon que es passa com a paràmetre, calculi el rectangle mínim que conté tot el polígon, tal com es mostra a la figura:
+Rectangle mínim
+
+
+La funció ha de retornar utilitzant paràmetres per referència les coordenades del punts que estan a la cantonada superior esquerra i a la cantonada inferior dreta del rectangle. Suposeu que treballeu amb un sistema de coordenades com el de la pantalla de l’ordinador en què el punt (0,0) ocupa l’extrem superior esquerra de forma que tant la coordenada x com la coordenada y sempre tenen valors positius, cap a la dreta i cap a baix, respectivament.
+Implementar una funció que donats dos polígons que es passen com a paràmetre, retorni si els seus rectangles mínims (calculats utilitzant la funció anterior) tenen algun punt d’intersecció.
