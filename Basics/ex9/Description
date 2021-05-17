@@ -1,0 +1,8 @@
+Feu una funció que es digui esSubString que rebi com a paràmetres dos strings (representats com a arrays de caràcters), s1 i s2. 
+La funció ha de retornar un valor lògic indicant si el segon string s2 és una subcadena del primer string s1. A més a més la funció ha de retornar, utilitzant un paràmetre per referència, la posició dins de s1 on podem trobar la coincidència amb s2.
+Feu també el programa principal que llegeix per teclat s1 i s2, crida a la funció esSubString i mostra per pantalla si s2 és una subcadena de s1 i, en cas de ser-ho, mostra també la posició de la coincidència, seguint aquest format:
+
+Exemple 1:  “com SI es substring de Hola, com estàs? a la posició 6”
+Exemple 2:  “cm NO es substring de Hola, com estàs?
+
+Implementeu la funció i el programa principal en fitxers de codi .cpp separats.
