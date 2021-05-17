@@ -1,0 +1,6 @@
+Una empresa divideix els seus clients en tres tipus diferents: bàsic, estàndard i Premium. A cada tipus de client se li aplica un descompte diferent cada cop que fa una compra d’algun producte, seguint els criteris següents:
+
+Als clients de tipus “bàsic” no se’ls hi aplica mai cap descompte.
+Als clients de tipus “estàndar” se’ls hi aplica un descompte del 5% si l’import de la compra és superior a 10.000€.
+Als clients de tipus “premium” se’ls hi aplica un descompte del 20% si l’import de la compra és superior a 10.000€, del 10% si és superior a 1.000€ i del 5% si és superior a 100€. Si és inferior no s’aplica cap descompte.
+Feu un programa que demani per teclat l’import de la compra i el tipus de client (com un caràcter: ‘B’ per clients bàsics, ‘S’ per clients estàndard i ‘P’ per clients premium) i mostri per pantalla l’import final que ha de pagar el client segons les condicions que hem explicat abans. Heu de comprovar que el valor que s’introdueix pel tipus de client sigui una de les opcions vàlides (‘B’, ‘S’, ‘P’). Si no ho és, enlloc de mostrar per pantalla l’import final, s’ha de mostrar el missatge “ERROR”.
