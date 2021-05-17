@@ -1,0 +1,26 @@
+a)Implementeu una funció calculaNota que calculi la nota final d’una assignatura a partir de les notes parcials de l’estudiant. La funció ha de rebre com a paràmetres tres valors que corresponen a la nota de teoria, problemes i pràctiques, respectivament, i retornar el valor de la nota numèrica final que es calcula segons la fórmula següent:
+Nota Final = 0.4 x Teoria + 0.3 x Problemes + 0.3 x Pràctiques
+
+Si alguna de les tres notes d’entrada té valor -1 (que equival a no presentat) la nota final també ha de tenir el valor -1 (no presentat).
+
+A més a més de la nota numèrica, la funció també ha de determinar la codificació de la nota de l’acta segons els criteris següents:
+
+–‘P’ (no presentat): nota igual a -1
+–‘S’ (suspès): nota entre 0.00 i 4.99
+–‘A’ (aprovat): nota entre 5.00 i 6.99
+–‘N’ (notable): nota entre 7.00 i 8.99
+–‘E’ (excel·lent): nota entre 9.00 i 9.99
+–‘M’ (matrícula d’honor): si la nota és 10
+La nota de l’acta s’ha de retornar com un caràcter en un paràmetre addicional que es passa per referencia.
+
+float calculaNota(float teoria, float problemes, float practiques, char& acta);
+
+b)Implementeu una funció calculaNotes que, utilitzant la funció anterior, permeti calcular la nota final d’un grup d’estudiants.
+La funció ha d’anar demanant per teclat les notes de teoria, problemes i pràctiques de tots els estudiants, cridar a la funció anterior per calcular la nota final numèrica i de l’acta i anar guardant el resultat en dos arrays (un per les notes numèriques i un altre per les notes de l’acta) que s’han de retornar com a paràmetres per referència de la funció.
+
+Després de calcular la nota de cada estudiant s’ha de demanar per teclat a l’usuari si vol introduir més notes. En cas afirmatiu el programa (resposta igual a ‘S’) continua demanant les notes d’un altre estudiant, i en cas negatiu (resposta igual a ‘N’), el programa ha d’acabar.
+
+La funció ha de retornar com a valor de retorn el nº d’estudiants introduïts.
+
+int calculaNotes(float notesFinals[], char notesActa[]);
+
