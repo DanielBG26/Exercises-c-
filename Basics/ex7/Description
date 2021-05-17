@@ -1,0 +1,11 @@
+Volem normalitzar un conjunt de valors guardats en un array perquè estiguin tots en el rang [0,1]. 
+Per això, calcularem primer el valor mínim i el valor màxim de tots els valors. Després substituirem cada valor x de l’array pel resultat d’aplicar aquesta expressió:
+
+x−minim / maxim−minim
+
+La funció ha de tenir aquesta capçalera:
+
+void normalitzaValors (float vector[], int nValors);
+on nValors és el número d’elements del vector a normalitzar. 
+Tingueu en compte que si nValors val 0, la funció no ha de fer res. 
+També tingueu en compte que si tots els valors del vector són iguals (i, per tant el valor del màxim és igual al mínim), la funció tampoc ha de fer res.
