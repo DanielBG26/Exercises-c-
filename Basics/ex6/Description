@@ -1,0 +1,4 @@
+Feu una funció que calculi xn utilitzant només multiplicacions. La funció ha de rebre com a paràmetres els valors de x i n i ha de retornar el valor de xn. 
+Tingueu en compte també el cas en què l’exponent sigui negatiu.
+Feu també el programa principal que llegeix per teclat els valors de x i n i mostra per pantalla el resultat de cridar a la funció anterior.
+
