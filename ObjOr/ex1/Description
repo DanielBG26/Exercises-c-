@@ -1,0 +1,36 @@
+a)  Implementeu una classe anomenada Recta, que permeti representar una recta i fer algunes operacions entre rectes i entre rectes i punts. Aquesta classe ha de tenir:
+Els atributs necessaris per guardar els paràmetres de la recta utilitzant l’equació general de la recta. L’equació general de la recta representa la recta amb l’expressió Ax+By+C=0, on A, B i C són els paràmetres que defineixen la recta.
+Mètodes per modificar i recuperar cadascun dels paràmetres de la recta: setA, setB, setC i getA, getB, getC.
+Un mètode que calculi la distància entre la recta i un punt:
+float distancia(Punt &pt);
+
+La distància d’un punt a la recta es pot calcular amb l’expressió següent:
+
+d=  (|Ax+By+C|)/√(A^2+B^2 )
+Un mètode que calculi el punt d’intersecció entre dues rectes:
+bool intersecció(Recta& r, Punt &pt);
+
+Aquest mètode ha de retornar true si existeix un punt d’intersecció entre les dues rectes o false si són paral·leles i no hi ha punt d’intersecció. Si existeix, el punt d’intersecció s’ha de retornar utilitzant el paràmetre per referència de la classe Punt.
+
+El punt d’intersecció de dues rectes expressades amb l’equació general de la recta, r_1: A_1 x+B_1 y+C_1=0 i r_2: A_2 x+B_2 y+C_2=0 es pot calcular d’aquesta forma:
+
+x=  (B_1 C_2-B_2 C_1)/(B_2 A_1-B_1 A_2 )         y=  (〖A_2 C_1-A〗_1 C_2)/(B_2 A_1-B_1 A_2 )
+Nota: la classe Punt us la donem ja implementada. És la classe Punt que hem utilitzat en els exemples de classe.
+
+
+Afegiu a la classe Recta els constructors següents:
+
+Un constructor per defecte que inicialitzi els paràmetres a la recta amb equació x=0.
+Un constructor per inicialitzar els paràmetres de la recta amb els valors que es passen com a paràmetre:
+Recta(float a, float b, float c);
+
+Un constructor per inicialitzar els paràmetres de la recta de forma que passi pels dos punts que es passen com a paràmetre:
+Recta(Punt& pt1, Punt& pt2);
+
+Suposant que (x_1,y_1) i (x_2,y_2) són els dos punts que es passen com a paràmetres, la recta (si no és vertical) queda definida per aquestes expressions:
+
+A=  (y_2-y_1)/(x_2-x_1 )
+B= -1.0
+C= -Ax_1+y_1
+Si la recta és vertical A=1.0, B=0 i C=-x_1.
+
