@@ -1,0 +1,9 @@
+El Sudoku és un trencaclosques format per 81 cel·les distribuïdes en una graella de 9x9 que es divideix en 9 subgraelles de 3x3. Les regles per emplenar les cel·les es resumeixen amb:
+
+·A cada casella hi ha d’haver un nombre entre 1 i 9.
+·A cada fila, columna i subgraella, hi ha d’haver els 9 nombres, sense repetir-ne cap.
+A tots els Sudokus, venen donades d’entrada tota una sèrie de xifres que s’anomenen pistes, i que serveixen com a punt de partida per a començar a resoldre el trencaclosques, a més de dotar-lo de solució única.
+
+Volem dissenyar un algorisme que ens permeti jugar al Sudoku. L’algorisme ha de començar a partir d’un Sudoku inicial que es passa com a paràmetre a la funció principal de l’algorisme. Durant la partida, a cada moviment se li demanarà al jugador que introdueixi un número del 1 al 9 i la casella (fila i columna) on el vol posar (també valors entre 1 i 9). L’algorisme haurà de comprovar que la casella no estigui ja ocupada i que sigui vàlid posar el número a la casella indicada segons les regles del joc. Si es compleixen aquestes condicions, l’hi posarà. Si no, es mostrarà per pantalla un missatge d’error. Després de cada moviment es mostrarà l'estat actual del Sudoku. La partida s’acabarà quan s’hagin omplert totes les caselles del Sudoku o quan el jugador indiqui que vol acabar, introduint un 0 quan se li demana el número a posar.
+
+Quan s’acabi la partida, la funció principal del joc retornarà el nº de moviments que s’han intentat (siguin vàlids o no) i un array de valors lògics indicant, per cada moviment intentat, si és vàlid o no.
