@@ -1,0 +1,46 @@
+En el joc del dominó cada jugador té 7 fitxes, cadascuna d’elles amb dos nombres entre 0 i 6. En el seu torn, el jugador ha de col·locar una fitxa en un extrem de la seqüència, de forma que algun dels dos nombres de la fitxa del jugador coincideixi amb el valor que hi ha posat a l’extrem de la seqüència. Si el jugador no té cap fitxa que es pugui col·locar, salta el seu torn al següent jugador. El joc s’acaba quan o bé un jugador ja ha pogut col·locar totes les seves fitxes, o quan cap dels jugadors pot posar cap fitxa vàlida.
+
+ Volem definir algunes estructures i funcions que ens ajudin a implementar el joc del dominó.
+
+1.       Definiu un struct que es digui Fitxa amb dos camps per guardar els dos valors d’una fitxa del joc. Implementeu també aquestes dues funcions que permeten inicialitzar i recuperar els valors de d’una fitxa:
+
+void inicialitzaFitxa(Fitxa& fitxa, int valor1, int valor2);
+Inicialitza els dos valors de la fitxa amb els valors que es passen com a paràmetres.
+
+void valorsFitxa(Fitxa& fitxa, int& valor1, int& valor2);
+Retorna els dos valors de la fitxa en els paràmetres per referència. Tingueu en compte que l’ordre en què es retornen a valor1 i valor2 ha de ser el mateix que tenien quan s’ha incialitzat la fitxa amb la funció anterior.
+
+2.       Definiu un struct que es digui Jugador que permeti guardar totes les fitxes que té un jugador en qualsevol moment de la partida. Implementeu també la funció següent que retorna el nº de fitxes que té un jugador en cada moment.
+
+int nFitxesJugador(Jugador& jugador);
+3.       Definiu un struct que es digui Partida que permeti guardar la informació necessària per gestionar una partida: els valors que hi ha als dos extrems de la seqüència de fitxes, quin és el jugador actual, i les fitxes dels 4 jugadors de la partida (utilitzant l’struct Jugador que heu definit a l’apartat anterior).  Implementeu també les funcions següents que permeten accedir a la informació d’aquesta estructura:
+
+int jugadorActual(Partida& partida);
+Retorna quin és el jugador que té el torn actual de la partida. Ha de ser un valor entre 1 i 4.
+
+int extremEsquerra(Partida& partida);
+Retorna el valor que ocupa l’extrem esquerra de la seqüència de fitxes.
+
+int extremDret(Partida& partida);
+Retorna el valor que ocupa l’extrem dret de la seqüència de fitxes.
+
+Utilitzant aquestes estructures, implementeu les funcions següents:
+
+4.       void inicialitzaPartida(Partida& partida, Fitxa fitxesInicials[]);
+
+Reparteix les fitxes entre tots els jugadors per començar la partida. La funció rep com a paràmetre un array amb la distribució inicial de les fitxes per repartir a cadascun dels 4 jugadors de la forma següent: les 7 primeres fitxes de l’array seran les fitxes del jugador 1, les 7 següents les del jugador 2 i així fins a omplir les fitxes de tots els jugadors.
+
+A més a més, s’ha d’inicialitzar l’estat de la partida per indicar que el primer moviment de la partida el farà sempre el jugador 1 i que encara no s’ha tirat cap fitxa.
+
+5.       void seleccionaFitxa(Partida& partida, Fitxa& fitxa);
+
+Selecciona una fitxa del jugador que té el torn actual de la partida per tirar i la retorna al paràmetre per referència fitxa. S’haurà de seleccionar una fitxa vàlida segons els valors que hi hagi als dos extrems del joc. Si el jugador té més d’una fitxa vàlida tirarà sempre la primera que se li hagi repartit al començar el joc. Si no té cap fitxa vàlida retornarà una fitxa amb els dos valors inicialitzats a -1. Si encara no s’ha tirat cap fitxa a la partida (i, per tant no hi ha valors vàlids als extrems del joc), es seleccionarà la primera de les fitxes que se li hagi repartit.
+
+A més a més de seleccionar la fitxa, aquesta funció també s’ha d’encarrregar d’eliminar-la del conjunt de fitxes actuals del jugador.
+
+6.       void actualitzaPartida(Partida& partida, Fitxa& fitxa);
+
+Actualitza l’estat actual de la partida quan es tira la fitxa que es passa com a paràmetre, actualitzant els valors dels extrems de la partida, segons a quin dels dos extrems es pugui posar la fitxa. Si es pot col·locar a qualsevol dels dos extrems de la seqüència de la partida, es tirarà sempre a l’extrem esquerre. Tingueu en compte que si un jugador no pot tirar al seu torn, els valors de la fitxa estaran inicialitzats a -1 i en aquest cas no s’ha d’actualitzar cap dels extrems de la partida.
+
+A més a més d’actualitzar els extrems de la partida, aquesta funció també s’ha d’encarregar de passar el torn al següent jugador.
+
