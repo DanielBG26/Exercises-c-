@@ -1,0 +1,25 @@
+Volem crear una classe per poder guardar i manipular hores en format hores, minuts i segons. Aquesta classe haurà de tenir:
+
+-          Atributs per guardar l’hora, el minut i el segon.
+
+-          Un constructor per defecte.
+
+-          Un constructor que rebi com a paràmetres tres valors, l’hora, el minut i el segon i inicialitzi els atributs de la classe.
+
+-          Un constructor de còpia.
+
+-          Mètodes setHora, setMinuts i setSegons, per inicialitzar el valors de l'hora, els minuts i els segons, respectivament
+
+-          Mètodes getHora, getMinuts i getSegons per retornar el valor de l'hora, els minuts i els segons, respectivament
+
+-          Un mètode horaValida que comprovi si l’hora és una hora vàlida entre les 00:00:00 i les 23:59:59.
+
+-          Un operador + que permeti sumar un nombre de segons determinat a una data. Podeu suposar que el nombre de segons serà sempre positiu. Heu de tenir en compte que el nº de segons pot ser superior a un dia sencer.
+
+-          Un operador + que permeti sumar dues hores en format hora, minuts i segons (dos objectes de la classe Hora).
+
+-          Un operador == que permeti determinar si dues hores són iguals.
+
+-          Un operador < que permeti determinar si una hora és més petita que una altra.
+
+-          Un operador d’assignació.
